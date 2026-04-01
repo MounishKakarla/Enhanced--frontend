@@ -1,0 +1,98 @@
+/* src/styles/settings.css */
+
+.settings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-page > h1 {
+  font-size: 24px;
+}
+
+.settings-page > p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* ── Content stack ──────────────────────────────────────────────────────────── */
+.settings-stack {
+  width: min(680px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Section icon ───────────────────────────────────────────────────────────── */
+.settings-section-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.settings-section-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ── Appearance section ─────────────────────────────────────────────────────── */
+.settings-appearance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-theme-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* ── Password strength ──────────────────────────────────────────────────────── */
+.pw-strength {
+  font-size: 12px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pw-match-ok   { color: var(--success); }
+.pw-match-fail { color: var(--danger);  }
+
+/* ── Account info rows ──────────────────────────────────────────────────────── */
+.settings-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.settings-info-label {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.settings-info-value {
+  font-weight: 500;
+}
+
+.settings-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}

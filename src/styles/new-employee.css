@@ -1,0 +1,216 @@
+/* src/styles/new-employee.css */
+/* .new-employee-page — no overrides needed */
+
+.back-btn { margin-bottom: 24px; }
+
+.new-employee-container {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Resume banner ──────────────────────────────────────────────────────────── */
+.resume-banner {
+  padding: 4px;
+}
+
+.resume-banner-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: var(--text-muted);
+}
+
+.resume-badge {
+  margin-left: auto;
+  background: var(--success-light);
+  color: var(--success);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+/* ── Step indicator ─────────────────────────────────────────────────────────── */
+.step-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+}
+
+.step-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.step-dot.active { background: var(--accent);  color: white; }
+.step-dot.done   { background: var(--success); color: white; }
+
+.step-label-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-label {
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.step-label.active { color: var(--accent);  }
+.step-label.done   { color: var(--success); }
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  margin-bottom: 20px;
+  background: var(--border);
+  transition: background 0.3s;
+}
+
+.step-line.done { background: var(--success); }
+
+/* ── Step card content ──────────────────────────────────────────────────────── */
+.step-heading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.step-desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+/* ── Role toggle buttons ────────────────────────────────────────────────────── */
+.role-toggles {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.role-toggle {
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s;
+  font-family: var(--font-body);
+}
+
+.role-toggle.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.role-toggle:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Role descriptions ──────────────────────────────────────────────────────── */
+.role-descriptions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.role-desc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+/* ── Review sections ────────────────────────────────────────────────────────── */
+.review-section {
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+.review-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: 10px 24px;
+}
+
+.review-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.review-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Info notice ────────────────────────────────────────────────────────────── */
+.info-notice {
+  padding: 12px 16px;
+  background: var(--info-light);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--info);
+}
+
+/* ── Step navigation ────────────────────────────────────────────────────────── */
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive — these are progressive enhancements since grids use minmax */
+@media (max-width: 600px) {
+  .new-employee-container { max-width: 100%; }
+  .role-toggles { flex-direction: column; }
+}

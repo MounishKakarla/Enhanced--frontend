@@ -1,0 +1,141 @@
+/* src/styles/dashboard.css */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  container-type: inline-size;
+}
+
+/* ── Greeting ───────────────────────────────────────────────────────────────── */
+.dashboard-greeting { margin-bottom: 8px; }
+
+.dashboard-greeting h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.dashboard-greeting p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* .dashboard-stats inherits .grid-4 from index.css — no overrides needed */
+
+
+/* ── Bottom section: Quick Actions + Recent Employees ────────────────────── */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@container (max-width: 850px) {
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .dashboard-actions fills its grid cell naturally */
+.dashboard-actions {
+  width: 100%;
+}
+
+/* Recent employees card fills the rest of the grid */
+.dashboard-recent-card {
+  min-width: 0; /* prevent grid blowout */
+  overflow: hidden;
+}
+
+/* ── Recent employees table ─────────────────────────────────────────────────── */
+.dashboard-recent-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dashboard table: no min-width needed, no sticky cols, just fills the card */
+.dashboard-recent-card .table-wrapper {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* ── Welcome card (employee role) ───────────────────────────────────────────── */
+.dashboard-welcome-card {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.dashboard-welcome-icon {
+  color: var(--text-muted);
+  margin: 0 auto 16px;
+  opacity: 0.4;
+}
+
+.dashboard-welcome-card h3 {
+  margin-bottom: 8px;
+}
+
+.dashboard-welcome-card p {
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .dashboard-actions { max-width: 100%; }
+}
+
+.dashboard-greeting h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.dashboard-greeting p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* .dashboard-stats inherits .grid-4 from index.css — no overrides needed */
+
+
+/* .dashboard-actions fills its grid-2 cell naturally */
+.dashboard-actions {
+  width: 100%;
+}
+
+/* ── Recent employees table ─────────────────────────────────────────────────── */
+.dashboard-recent-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── Welcome card (employee role) ───────────────────────────────────────────── */
+.dashboard-welcome-card {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.dashboard-welcome-icon {
+  color: var(--text-muted);
+  margin: 0 auto 16px;
+  opacity: 0.4;
+}
+
+.dashboard-welcome-card h3 {
+  margin-bottom: 8px;
+}
+
+.dashboard-welcome-card p {
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .dashboard-actions { max-width: 100%; }
+}

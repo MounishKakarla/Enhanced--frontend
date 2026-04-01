@@ -1,0 +1,104 @@
+/* src/styles/inactive-employees.css */
+
+.inactive-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Page header ────────────────────────────────────────────────────────────── */
+.inactive-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.inactive-page-header h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.inactive-page-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ── Filter bar ─────────────────────────────────────────────────────────────── */
+.inactive-filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.inactive-filter-field-grow { flex: 1 1 200px; }
+.inactive-filter-field      { flex: 0 1 200px; }
+
+/* ── Table ──────────────────────────────────────────────────────────────────── */
+.inactive-table-wrap {
+  border: none;
+  border-radius: 0;
+}
+
+/* ── Deactivated status cell ────────────────────────────────────────────────── */
+.deactivated-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--danger);
+}
+
+/* ── Pagination bar ─────────────────────────────────────────────────────────── */
+.inactive-pagination-bar {
+  border-top: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ── Sortable column header ─────────────────────────────────────────────────── */
+.sortable-th {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable-th:hover {
+  color: var(--text-primary);
+}
+
+.sort-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Empty / error states ───────────────────────────────────────────────────── */
+.inactive-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  gap: 12px;
+  text-align: center;
+}
+
+.inactive-empty svg { opacity: 0.3; }
+
+.inactive-error {
+  background: var(--danger-light);
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--danger);
+}

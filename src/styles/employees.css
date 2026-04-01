@@ -1,0 +1,132 @@
+/* src/styles/employees.css */
+
+.employees-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Page header ────────────────────────────────────────────────────────────── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ── Filter bar ─────────────────────────────────────────────────────────────── */
+/* .filter-bar inherits .card.card-sm — no overrides needed */
+
+.filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-field {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.filter-field-grow {
+  flex: 2 1 300px;
+  min-width: 200px;
+}
+
+/* ── Sortable column headers ────────────────────────────────────────────────── */
+.sortable-th {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable-th:hover { color: var(--text-primary); }
+
+.sort-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── Fetch refreshing banner ────────────────────────────────────────────────── */
+.fetch-indicator {
+  padding: 8px 24px;
+  background: var(--accent-light);
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* ── Error banner ───────────────────────────────────────────────────────────── */
+.error-banner {
+  background: var(--danger-light);
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--danger);
+}
+
+/* ── Pagination bar ─────────────────────────────────────────────────────────── */
+.pagination-bar {
+  border-top: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pagination-info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── Employee ID cell ───────────────────────────────────────────────────────── */
+.emp-id-cell {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ── Bulk Actions Bar ───────────────────────────────────────────────────────── */
+.bulk-actions-bar {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.bulk-actions-bar .btn-danger {
+  background: var(--danger);
+  color: white;
+  border: none;
+}
+
+.bulk-actions-bar .btn-danger:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+tr.selected-row {
+  background: var(--accent-light) !important;
+}
+
+tr.selected-row:hover {
+  background: var(--accent-light) !important;
+  opacity: 0.9;
+}

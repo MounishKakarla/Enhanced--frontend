@@ -1,0 +1,265 @@
+/* src/styles/employee-detail.css */
+
+.employee-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Back button ────────────────────────────────────────────────────────────── */
+.detail-back-btn {
+  margin-bottom: 24px;
+}
+
+/* ── Hero card ──────────────────────────────────────────────────────────────── */
+.detail-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.detail-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.detail-hero-info h2 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.detail-hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.detail-hero-roles {
+  margin-top: 8px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.detail-hero-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Inactive banner ────────────────────────────────────────────────────────── */
+.detail-inactive-banner {
+  padding: 8px 16px;
+  background: var(--danger-light);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--danger);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Self-deactivation warning ──────────────────────────────────────────────── */
+.self-warning {
+  padding: 6px 12px;
+  background: var(--warning-light);
+  border: 1px solid var(--warning);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--warning);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Inline editable field ──────────────────────────────────────────────────── */
+.inline-field-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.inline-field-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-field-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.inline-field-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+}
+
+/* Show pencil icon only on row hover */
+.inline-field-row:hover .inline-edit-btn {
+  opacity: 1 !important;
+}
+
+.inline-edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+/* Disabled / read-only field value */
+.inline-field-readonly {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 2px 0;
+  word-break: break-all;
+}
+
+/* Inline edit controls */
+.inline-edit-controls {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+/* ── Editable name in hero ──────────────────────────────────────────────────── */
+.editable-name {
+  font-size: 22px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s;
+}
+
+.editable-name:hover {
+  color: var(--accent);
+}
+
+.editable-name .name-pencil {
+  transition: opacity 0.15s;
+}
+
+.editable-name:hover .name-pencil {
+  opacity: 0.7;
+}
+
+/* ── Section cards ──────────────────────────────────────────────────────────── */
+.detail-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.detail-section-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.detail-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Skills card ────────────────────────────────────────────────────────────── */
+.skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.skills-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--success-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success-light);
+  color: var(--success);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.skill-chips-wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Static detail row ──────────────────────────────────────────────────────── */
+.detail-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.detail-item-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-item-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.detail-item-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Description card ───────────────────────────────────────────────────────── */
+.detail-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.detail-description.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
